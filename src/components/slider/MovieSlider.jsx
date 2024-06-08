@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { NavLink } from 'react-router-dom';
 import { fetchMovies } from '../../utils/fetchMovies';
 import { settings } from '../../utils/sliderSettings';
+import useSWR from 'swr'
 
 export const MovieSlider = ({ movie }) => {
   const [movies, setMovies] = useState()

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
+import useSWR from 'swr'
 
 export const MovieMedia = ({ movie }) => {
     const { id } = useParams()
@@ -11,7 +12,6 @@ export const MovieMedia = ({ movie }) => {
             .then(res => res.json())
             .then(res => setMovies(res))
     }, [])
-    console.log(movies);
     return (
         <div>
             {movies &&
