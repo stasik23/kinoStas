@@ -1,10 +1,10 @@
 import React from 'react'
-import { MovieCard } from '../../components/moviecard/MovieCard'
+import { MovieMedia } from '../../components/media/MovieMedia'
 
-export const MoviePage = () => {
+export const MoviePage = ({ movie }) => {
   return (
     <div>
-        <MovieCard/>
+        <MovieMedia/>
     </div>
   )
 }
