@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NavLink } from 'react-router-dom';
 import { fetchMovies } from '../../utils/fetchMovies';
-import { settings } from '../../utils/sliderSettings';
+import { movieSettings } from '../../utils/movieSliderSettings';
 import useSWR from 'swr'
 
 export const MovieSlider = ({ movie }) => {
@@ -14,7 +14,7 @@ export const MovieSlider = ({ movie }) => {
       fetchMovies('https://664859d22bb946cf2fa042e8.mockapi.io/Cougavg').then((res)=>{ setMovies(res) })
     }, [])
     return (
-      <Slider {...settings}>
+      <Slider {...movieSettings}>
         {movies && movies.map((movie => 
           <div key={movie.id} className="relative">
             <img src={movie.landImages} alt={movie.movie} className="w-full h-screen object-cover" />

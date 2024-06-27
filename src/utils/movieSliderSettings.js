@@ -1,4 +1,4 @@
-export const settings = {
+export const movieSettings = {
   dots: false,
   infinite: true,
   speed: 500,

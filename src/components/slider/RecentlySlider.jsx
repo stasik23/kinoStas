@@ -2,22 +2,32 @@ import React, { useEffect, useState } from 'react'
 // import { useSelector } from 'react-redux';
 import useSWR from 'swr'
 
-export const RecentlySlider = () => {
+export const RecentlySlider = ({ movie }) => {
     // const recentlyUpdated = useSelector(state => state.data.recentlyUpdated);
-    
+
     return (
-        <div className="recently-slider">
-            <h2 className="text-white text-2xl mb-4">Recently Updated</h2>
-            <div className="flex space-x-4 overflow-x-auto">
-                {/* {recentlyUpdated.map(movie => (
-                    <div key={movie.id} className="recently-updated-item">
-                        <img src={movie.images} alt={movie.movie} className="w-44 h-64 object-cover rounded" />
-                        <p className="text-white text-center mt-2">{movie.movie}</p>
-                        <p className="text-gray-400 text-center text-sm">{`Series/S ${movie.season || 1} / EP ${movie.episode || 1}`}</p>
-                        <p className="text-gray-400 text-center text-sm">{new Date(movie.createdAt).toLocaleDateString()}</p>
+        <>
+            {movie && movie.map((movie => {
+                <div className="bg-black text-white p-5">
+                    <h2 className="text-2xl mb-4">Recently Updated</h2>
+                    <div className="flex items-center">
+                        {movie && movie.map((movie) => (
+                            <div key={movie.id} className="mr-4 text-center">
+                                <img className="w-56 h-80 rounded-lg" src={movie.landImages} alt={movie.movie} />
+                                <div className="mt-2">
+                                    <h3 className="text-lg">{movie.movie}</h3>
+                                    <p className="text-sm">{movie.episode}<br />{movie.date}</p>
+                                </div>
+                            </div>
+                        ))}
+                        <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center cursor-pointer">
+                            <img src="/path/to/your/arrow/icon.png" alt="Arrow" className="w-5 h-5" />
+                        </div>
                     </div>
-                ))} */}
-            </div>
-        </div>
+                </div>
+            }))}
+        </>
+
+
     )
 }

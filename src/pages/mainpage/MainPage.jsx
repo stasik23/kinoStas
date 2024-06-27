@@ -3,6 +3,7 @@ import { MovieSlider } from '../../components/slider/MovieSlider'
 import { CounterContext } from '../../provider/Counter'
 import { RecentlySlider } from '../../components/slider/RecentlySlider'
 import { MovieGrid } from '../../components/grid/MovieGrid'
+import { MovieTrending } from '../../components/media/MovieTrending'
 
 export const MainPage = () => {
   const {increment} = useContext(CounterContext)
@@ -10,7 +11,7 @@ export const MainPage = () => {
     <div>
         <MovieSlider/>
         <RecentlySlider/>
-        <button onClick={()=> increment()}>add</button>
+        <MovieTrending/>
         <MovieGrid/>
     </div>
   )
