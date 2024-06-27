@@ -17,14 +17,15 @@ export const MovieMedia = ({ movie }) => {
             {movies &&
                 <div key={movies.id} className="bg-black text-white p-6 font-sans">
                     <div className="relative pb-56.25 overflow-hidden h-0 max-w-full bg-black">
-                        <video className="absolute top-0 left-0 w-full h-full" controls>
+                        <img className="absolute top-0 left-0 w-full h-full" src={movies.landImages} alt="" />
+                        {/* <video className="absolute top-0 left-0 w-full h-full" controls>
                             <source src={movies.landImages} type="video/mp4" />
                             Your browser does not support the video tag.
-                        </video>
+                        </video> */}
                     </div>
                     <div className="mt-6 flex flex-col md:flex-row items-start">
                         {/* TODO: Uncomment and use the poster image */}
-                        <img src={movies.posterUrl} alt={movies.movie} className="w-36 rounded-lg mb-6 md:mb-0 md:mr-6" />
+                        <img src={movies.images} alt={movies.movie} className="w-36 rounded-lg mb-6 md:mb-0 md:mr-6" />
                         <div>
                             <h1 className="text-4xl font-bold mb-4">{movies.movie}</h1>
                             <div className="flex space-x-2 mb-4">
