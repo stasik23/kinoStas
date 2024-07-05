@@ -23,7 +23,7 @@ export const MovieTrending = () => {
                 {movies &&
                     movies.map(movie => (
                         <div key={movie.id} className="px-2">
-                            <div className="bg-gray-900 text-white rounded-lg overflow-hidden shadow-lg w-400 h-300">
+                            <div className="bg-gray-900 text-white rounded-lg overflow-hidden shadow-lg">
                                 <div className="relative">
                                     <img 
                                         src={movie.landImages} 
@@ -70,8 +70,8 @@ export const MovieTrending = () => {
                             url={playingMovie.trailerUrl} 
                             playing 
                             controls 
-                            width="100%" 
-                            height="100%"
+                            width="90vw" 
+                            height="90vh"
                         />
                     </div>
                 </div>

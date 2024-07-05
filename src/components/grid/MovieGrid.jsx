@@ -12,13 +12,12 @@ export const MovieGrid = () => {
             {movie && movie.map(movie => (
                 <div key={movie.id} className="bg-gray-900 text-white rounded-lg overflow-hidden shadow-lg">
                     <div className="relative">
-                        <img src={movie.images} alt={movie.title} className="w-full h-auto object-cover rounded-t-lg" />
+                        <img src={movie.images} alt={movie.movie} className="w-full h-auto object-cover rounded-t-lg" />
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                            <span className="bg-white text-black text-sm font-semibold px-2 py-1 rounded">{movie.duration}</span>
                         </div>
                     </div>
                     <div className="p-4">
-                        <h3 className="text-lg font-bold mb-2 truncate">{movie.title}</h3>
+                        <h3 className="text-lg font-bold mb-2 truncate">{movie.movie}</h3>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {movie.genres.map((genre, index) => (
                                 <span key={index} className="bg-red-600 text-white px-2 py-1 rounded-full text-xs">{genre}</span>
