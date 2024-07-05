@@ -26,9 +26,9 @@ export const Category = ({ movie }) => {
               <h2 className="text-xl font-semibold mb-4">Категории</h2>
               <ul>
                 {movies.map((movie) => (
-                  <li key={category.id} className="mb-2">
+                  <li key={movie.id} className="mb-2">
                     <button className="w-full text-left text-black hover:bg-gray-200 p-2 rounded-lg">
-                      {category.name}
+                      {movie.movie}
                     </button>
                   </li>
                 ))}
