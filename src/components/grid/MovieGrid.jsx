@@ -13,7 +13,7 @@ export const MovieGrid = () => {
                 <div key={movie.id} className="bg-gray-900 text-white rounded-lg overflow-hidden shadow-lg">
                     <div className="relative">
                         <img src={movie.images} alt={movie.movie} className="w-full h-auto object-cover rounded-t-lg" />
-                        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"> 
                         </div>
                     </div>
                     <div className="p-4">

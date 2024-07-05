@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import BurgerMenu from './BurgerMenu';
 
 export const Navbar2 = () => {
   return (
@@ -28,12 +29,7 @@ export const Navbar2 = () => {
           <NavLink to="/animation" className="hover:text-gray-400">Animation</NavLink>
           <NavLink to="/login" className="hover:text-gray-400">Login/Signup</NavLink>
           <div className="relative">
-            <button className="relative">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h18M3 12h18m-9 9h9" />
-              </svg>
-              <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
-            </button>
+            <BurgerMenu/>
           </div>
         </div>
       </div>
