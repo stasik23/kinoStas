@@ -8,6 +8,7 @@ export const Category = () => {
 
     const handleToggleMenu = () => {
         setIsOpen(!isOpen);
+        console.log(isOpen);
     };
     return (
         <div>

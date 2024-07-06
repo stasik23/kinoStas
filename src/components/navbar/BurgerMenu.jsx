@@ -25,14 +25,15 @@ const BurgerMenu = () => {
                         d="M4 6h16M4 12h16m-7 6h7"
                     ></path>
                 </svg>
-                {isOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={handleToggleMenu}></div>
-                )}
-                <div
-                    className={`fixed top-0 right-0 w-64 bg-white h-full shadow-lg z-50 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                    <Category />
-                </div>
             </button>
+            {isOpen && (
+                <div>
+                    <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={handleToggleMenu}></div>
+                    <div className={`fixed top-0 right-0 w-64 bg-white h-full shadow-lg z-50 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                        <Category />
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
